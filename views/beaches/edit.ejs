@@ -1,0 +1,61 @@
+<% layout('layout/boilerplate') %> 
+
+    <div class="row">
+        <h1 class="text-center">Edit Beach!!</h1>
+        <div class="col-md-6 offset-md-3">
+            <form action="/beaches/<%= beach.id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label"for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="beach[title]" value="<%= beach.title %>" required>
+                    <div class="valid-feedback">LOOKS GOOD!!</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location</label>
+                    <input class="form-control" type="text" id="location" name="beach[location]" value="<%= beach.location %>" required>
+                    <div class="valid-feedback">LOOKS GOOD!!</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label" for="price">Price</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id = "price-label">$</span>
+                        <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="beach[price]" value="<%= beach.price %>" required >
+                    </div>
+                    <div class="valid-feedback">LOOKS GOOD!!</div>
+                </div>
+    
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="beach[description]" required><%= beach.description  %></textarea>
+                    <div class="valid-feedback">LOOKS GOOD!!</div>
+                </div>
+                
+                <label class="form-label">Add more Images..</label>
+                <div class="input-group mb-3">
+                    
+                    <input type="file" class="form-control" id="inputGroupFile02" name="image" multiple>
+                    <!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> -->
+                </div>
+                
+                <div class="mb-3">
+                    <% beach.images.forEach(function(img,i){ %> 
+                        <img src="<%= img.url %> " class="img-thumbnail" alt="" style="width: 200px ; height: 100px; ">
+                        <div class="form-check-inline">
+                            <input type="checkbox" id="image-<%=i%> " name="deleteImages[]" value="<%=img.filename%> "> 
+                            <label for="image-<%=i%> " >Delete</label>    
+                        </div>
+                        
+                    <% }) %> 
+                </div>
+
+
+                <div class="mb-3">
+                    <button class="btn btn-info">SAVE THE EDITS!!</button>
+                </div>
+                
+            </form>
+            <a class = ""href="/beaches/">BACK TO SHOW PAGE</a>
+        </div>
+    </div>
+    
+        

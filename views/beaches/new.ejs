@@ -1,0 +1,57 @@
+<% layout('layout/boilerplate') %> 
+
+<div class="row">
+    <h1 class="text-center">New Beach!!</h1>
+    <div class="col-md-6 offset-md-3">
+        <form action="/beaches" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label"for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="beach[title]" required>
+                <div class="valid-feedback">LOOKS GOOD!!</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="beach[location]" required>
+                <div class="valid-feedback">LOOKS GOOD!!</div>
+            </div>
+            
+            <!-- <input type="file" name="image" id="" multiple> -->
+            <!-- <div class="mb-3">
+                <label class="form-label" for="image">Image</label>
+                <input class="form-control" type="text" id="image" name="beach[image]" required>
+                <div class="valid-feedback">LOOKS GOOD!!</div>
+            </div> -->
+            <div class="mb-3">
+                <label class="form-label" for="price">Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id = "price-label">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name=beach[price] required>
+                </div>
+                <div class="valid-feedback">LOOKS GOOD!!</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="beach[description]" required></textarea>
+                <div class="valid-feedback">LOOKS GOOD!!</div>
+            </div>
+
+            <label class="form-label">Upload Your Files..</label>
+            <div class="input-group mb-3">
+                
+                <input type="file" class="form-control" id="inputGroupFile02" name="image" multiple>
+                <!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> -->
+            </div>
+            
+
+            
+            <div class="mb-3 ">
+                
+                <button class="btn btn-success">Add BEACH</button>
+            </div>
+            
+        </form>
+        <a href="/beaches/">BACK TO SHOW PAGE</a>
+    </div>
+</div>
+

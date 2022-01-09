@@ -1,0 +1,31 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><svg class = "mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+          </svg> BEE-ACHES</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/beaches">Beaches</a>
+                <a class="nav-link" href="/beaches/new">New Beach</a>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <% if(!currentUser) {%>
+                <a class="nav-link navbar-right me-auto" href="/login">Login</a>
+                <a class="nav-link navbar-right me-auto" href="/register">Register</a>
+                <% } else {%>
+                <a class="nav-link navbar-right me-auto" href="/logout">Logout</a>
+                <% } %>
+            </div>
+        </div>
+
+
+        
+        
+        
+    </div>
+  </nav> 

@@ -10,7 +10,7 @@ a full working website called beaches where user can come and share their holida
 
 # Code Link
 
-https://github.com/vishal18122/bee-aches_app/new/master?readme=1
+https://github.com/vishal18122/bee-aches_app
 
 # Demo 
 
